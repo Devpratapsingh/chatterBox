@@ -74,7 +74,13 @@ export default function Chat() {
 
   // Handle Logout
   const handleLogout = () => {
-    sessionStorage.setItem("token", "");
+    if (typeof window !== 'undefined') {
+  // Use sessionStorage here
+  sessionStorage.setItem("token", "");
+  // Do something with value
+}
+
+   
     router.push("/login"); // Redirect to the login page
   };
 
