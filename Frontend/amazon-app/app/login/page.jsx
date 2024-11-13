@@ -21,7 +21,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/login`,
+        `https://chatterbox-iztf.onrender.com/login`,
         {
           email,
           password,
