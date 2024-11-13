@@ -24,7 +24,7 @@ export default function Chat() {
 
   useEffect(() => {
     if (accessToken) {
-      const socketInstance = io(`${process.env.NEXT_PUBLIC_API_BASE_URL}/`);
+      const socketInstance = io(`https://chatterbox-iztf.onrender.com/`);
       setSocket(socketInstance);
 
       // Listen for chat messages
