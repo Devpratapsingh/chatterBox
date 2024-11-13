@@ -12,6 +12,7 @@ export default function Chat() {
   const [isConnected, setIsConnected] = useState(false);
 
   // Get access token from session storage
+  let accessToken;
   if (typeof window !== 'undefined') {
   // Use sessionStorage here
   const accessToken = sessionStorage.getItem("token");
