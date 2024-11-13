@@ -31,7 +31,7 @@ export default function signup() {
     } else {
       try {
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/signup`,
+          `https://chatterbox-iztf.onrender.com/signup`,
           {
             email,
             name,
