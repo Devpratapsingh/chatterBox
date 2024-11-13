@@ -12,7 +12,13 @@ export default function Chat() {
   const [isConnected, setIsConnected] = useState(false);
 
   // Get access token from session storage
+  if (typeof window !== 'undefined') {
+  // Use sessionStorage here
   const accessToken = sessionStorage.getItem("token");
+  // Do something with value
+  }
+
+  
   const router = useRouter();
 
   useEffect(() => {
