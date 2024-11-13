@@ -27,8 +27,12 @@ function Login() {
           password,
         }
       );
-
-      sessionStorage.setItem("token", response.data.token);
+  if (typeof window !== 'undefined') {
+  // Use sessionStorage here
+  sessionStorage.setItem("token", response.data.token);
+  // Do something with value
+}
+      
       router.push("/chatBox");
     } catch (error) {
       setErrorMessage("Invalid email or password");
